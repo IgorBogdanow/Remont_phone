@@ -1,0 +1,25 @@
+@mixin text($color:white,$size:30,$weight:bold)
+    color: $color
+    font-size: calc( ( 100vw / 1920 ) * #{$size})
+    font-weight: $weight
+    @media (max-width: 760px)
+        font-size: calc( ( 100vw / 600 ) * #{$size})
+.prise__cont
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+.prise
+    display: flex
+    justify-content: space-between
+    &__block
+        border-bottom: 3px solid #00A3AF
+        width: 90%
+        &__head
+            display: flex
+            justify-content: space-between
+            &>h3
+                @include text(#00A3AF ,30 ,bold )
+        &__txt
+            @include text(#191722 ,20 ,regular )
+       

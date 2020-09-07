@@ -1,0 +1,22 @@
+@mixin text($color:white,$size:30,$weight:bold)
+    color: $color
+    font-size: calc( ( 100vw / 1920 ) * #{$size})
+    font-weight: $weight
+    @media (max-width: 760px)
+        font-size: calc( ( 100vw / 600 ) * #{$size})
+.breaking
+    background-color: #00A3AF
+    border-radius: 50px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-self: center
+    & h4
+        @include text(#FFFFFF ,30 ,bold )
+        padding-top: 40px
+        padding-bottom: 25px
+    & p
+        @include text(#FFFFFF ,20,regular )
+        padding-bottom: 40px
+    &>div
+        padding-bottom: 40px

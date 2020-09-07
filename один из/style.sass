@@ -1,0 +1,14 @@
+@mixin text($color:white,$size:30,$weight:bold)
+    color: $color
+    font-size: calc( ( 100vw / 1920 ) * #{$size})
+    font-weight: $weight
+    @media (max-width: 760px)
+        font-size: calc( ( 100vw / 600 ) * #{$size})
+.oi
+    display: flex
+    flex-direction: column
+    height: 100%
+    justify-content: center
+    & p
+        @include text(#00A3AF ,40 ,bold )
+        line-height: 1.5

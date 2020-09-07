@@ -1,0 +1,26 @@
+@mixin text($color:white,$size:30,$weight:bold)
+    color: $color
+    font-size: calc( ( 100vw / 1920 ) * #{$size})
+    font-weight: $weight
+    @media (max-width: 760px)
+        font-size: calc( ( 100vw / 500 ) * #{$size})
+.brands
+    &__line
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+        &>img
+            width: 260px
+.todo
+    @include text(#00A3AF ,40 ,bold )
+    text-align: center
+    margin-bottom: 40px
+        
+@media ( max-width: 1555px )
+    .brands
+        &__line
+            justify-content: space-evenly
+@media (max-width: 760px)
+    .brands
+        &__line
+            justify-content: space-evenly

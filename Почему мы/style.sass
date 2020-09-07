@@ -1,0 +1,40 @@
+@mixin text($color:white,$size:30,$weight:bold)
+    color: $color
+    font-size: calc( ( 100vw / 1920 ) * #{$size})
+    font-weight: $weight
+    @media (max-width: 760px)
+        font-size: calc( ( 100vw / 500 ) * #{$size})
+    @media (max-width: 1100px)
+        font-size: calc( ( 100vw / 1400 ) * #{$size})
+*
+    font-style: montserrat
+.cont
+    display: flex
+    justify-content: center
+    width: calc( ( 100vw / 1920 ) * 815)
+    &__num
+        align-self: center
+        height: 100%
+        @include text(#00A3AF,60,bold)
+        padding-right: 20px
+    &__txt
+        &>h3
+            @include text(#00A3AF ,30 ,bold )
+        &>p
+            @include text(#191722 ,20 ,bold )
+.flex_col_sp
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+.et_pb_column
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+.box
+    display: flex
+    justify-content: center
+@media (max-width: 760px)
+    .cont
+        margin: auto
+        width: 90vw
+        margin-bottom: 20px    

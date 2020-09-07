@@ -1,0 +1,55 @@
+@mixin text($color:white,$size:30,$weight:bold)
+    color: $color
+    font-size: calc( ( 100vw / 1920 ) * #{$size})
+    font-weight: $weight
+    @media (max-width: 760px)
+        font-size: calc( ( 100vw / 600 ) * #{$size})
+.contact
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    width: 80%
+    &__head
+        & h4
+            @include text(#00A3AF ,40 ,bold )
+            margin-bottom: 30px
+    &__time
+        & h5
+            @include text(#00A3AF ,30 ,bold )
+            margin-bottom: 15px
+        & p
+            @include text(#00A3AF ,20 ,regular )
+            margin-bottom: 30px
+    &__adress
+        @include text(#00A3AF ,20 ,regular )
+        margin-bottom: 30px
+        & img
+            vertical-align: middle
+            margin-right: 20px 
+            display: inline-block
+            margin-top: 15px
+        & a
+            @include text(#00A3AF ,20 ,regular )
+            margin-top: 15px
+    &__btn
+        margin-top: 11px
+        background-color: #00A3AF
+        border: 0px
+        border-radius: 50px
+        box-shadow: 0px 3px 6px rgba(0,0 ,0 ,0.16 )
+        margin-bottom: 30px
+        text-align: center
+        @include text(#ffffff ,20 ,bold )
+// Галлерея начало
+#gallery_block
+    & .et_pb_gallery_items.et_post_gallery.clearfix
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        justify-content: center
+    & .et_pb_grid_item
+        margin: 0.2vw !important
+        width: 32%!important
+// Галерея конец
+

@@ -1,0 +1,26 @@
+@mixin text($color:white,$size:30,$weight:bold)
+    color: $color
+    font-size: calc( ( 100vw / 1920 ) * #{$size})
+    font-weight: $weight
+    @media (max-width: 760px)
+        font-size: calc( ( 100vw / 600 ) * #{$size})
+.comm__cont
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+.comm
+    width: 80%
+    &>h3
+        @include text(#191722 ,20 ,bold )
+        border-bottom: 3px solid #00A3AF
+        width: 80%
+        padding-bottom: 15px
+        margin-bottom: 15px
+    &>p
+        @include text(#191722 ,20 ,regular )
+        text-align: justify
+#zag
+    @include text(#00A3AF ,40 ,bold )
+    margin-bottom: 30px
+    

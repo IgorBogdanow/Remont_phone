@@ -1,0 +1,304 @@
+// @mixin text($color:white,$size:30,$weight:bold)
+//     color: $color
+//     font-size: calc( ( 100vw / 1920 ) * #{$size})
+//     font-weight: $weight
+//     @media (max-width: 760px)
+//         font-size: calc( ( 100vw / 600 ) * #{$size})
+@mixin text($color:white,$size:30,$weight:bold)
+    color: $color
+    font-size: calc( ( 100vw / 1920 ) * #{$size})
+    font-weight: $weight
+    @media (max-width: 760px)
+        font-size: calc( ( 100vw / 500 ) * #{$size})
+    @media (max-width: 1100px)
+        font-size: calc( ( 100vw / 1000 ) * #{$size})
+*
+    font-family: montserrat
+    & h2
+        text-align: center
+        margin-bottom: 46px
+        padding: 0
+        @include text(#00A3AF ,40 ,bold) 
+// Футер-начало
+#footer
+    background-color: #00A3AF
+    &__map
+        &__container
+    &__contact
+        width: 80%
+        &__container
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            & h4
+                margin-bottom: 30px
+                padding: 0
+                @include text(#FFFFFF ,40 ,bold )
+                
+            & h5
+                margin-bottom: 15px
+                padding: 0
+                @include text(#FFFFFF ,30 ,bold )
+                
+            & p
+                margin-bottom: 19px
+                padding: 0
+                @include text(#FFFFFF ,20 ,regular )
+                
+                & a
+                    margin-right: 25px
+                    @include text(#FFFFFF ,20 ,regular )
+                    
+                &>img
+                    margin-right: 20px 
+                    display: inline-block
+                    color: #FFFFFF
+                    vertical-align: middle
+        &__btn
+            margin-top: 11px
+            background-color: #FFFFFF
+            border: 0px
+            background-color: white
+            border-radius: 50px
+            box-shadow: 0px 3px 6px rgba(0,0 ,0 ,0.16 )
+            margin-bottom: 30px
+            text-align: center
+            @include text(#00A3AF ,20 ,bold )
+            // &>a
+            //     padding: 5px 0px 5px 0px!important
+#time
+    margin-bottom: 30px!important
+#links
+    &>div>p>a>img:hover
+        box-shadow: 0px 3px 6px rgba(0,0 ,0 ,0.16 )
+@media (max-width: 760px)
+    #footer__map__container
+        display: none
+// Футер-конец
+// Стиль страницы контакты начало
+// Стиль текстового блока
+.contact
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    width: 80%
+    &__head
+        & h4
+            @include text(#00A3AF ,40 ,bold )
+            margin-bottom: 30px
+    &__time
+        & h5
+            @include text(#00A3AF ,30 ,bold )
+            margin-bottom: 15px
+        & p
+            @include text(#00A3AF ,20 ,regular )
+            margin-bottom: 30px
+    &__adress
+        @include text(#00A3AF ,20 ,regular )
+        margin-bottom: 30px
+        & img
+            vertical-align: middle
+            margin-right: 20px 
+            display: inline-block
+            margin-top: 15px
+        & a
+            @include text(#00A3AF ,20 ,regular )
+            margin-top: 15px
+    &__btn
+        margin-top: 11px
+        background-color: #00A3AF
+        border: 0px
+        border-radius: 50px
+        box-shadow: 0px 3px 6px rgba(0,0 ,0 ,0.16 )
+        margin-bottom: 30px
+        text-align: center
+        @include text(#ffffff ,20 ,bold )
+// Галлерея начало
+#gallery_block
+    & .et_pb_gallery_items.et_post_gallery.clearfix
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        justify-content: center
+    & .et_pb_grid_item
+        margin: 0.2vw !important
+        width: 32%!important
+// Галерея конец
+// Стиль страницы контакты конец
+// Заголовок описания блока контактной формы
+.oi
+    display: flex
+    flex-direction: column
+    height: 100%
+    justify-content: center
+    & p
+        @include text(#00A3AF ,40 ,bold )
+        line-height: 1.5
+// вей
+// Отзывы вне слайдера
+.comm__cont
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+.comm
+    width: 80%
+    &>h3
+        @include text(#191722 ,20 ,bold )
+        border-bottom: 3px solid #00A3AF
+        width: 80%
+        padding-bottom: 15px
+        margin-bottom: 15px
+    &>p
+        @include text(#191722 ,20 ,regular )
+        text-align: justify
+#zag
+    @include text(#00A3AF ,40 ,bold )
+    margin-bottom: 30px
+// Отзывы вне слайдера конец
+// Слайдер с комментами заголовок
+.comment
+    &__head
+        @include text(#00A3AF ,40 ,bold )
+        text-align: center
+        margin-bottom: 50px
+// Слайдер с комментами заголовок конец
+// Порядок работ
+.work
+    & h2
+        text-align: center
+        margin-bottom: 46px
+        padding: 0
+        @include text(#00A3AF ,40 ,bold) 
+    &__cards
+        width: calc( ( 100vw / 1920 ) * 1646 )
+        &__one
+            margin: 10px
+            & h4
+                text-align: center
+                padding: 0
+                margin-bottom: 15px
+                @include text(#00A3AF ,30 ,bold )
+                
+            & p
+                font-size: calc( ( 100vw / 1920 ) * 20 )
+                color: #191722
+                padding: 0
+                text-align: center
+                @include text(#191722 ,20 ,regular )               
+.et_pb_main_blurb_image
+    margin-bottom: 15px
+@media (max-width: 760px)
+    .work__cards__one
+        margin-bottom: 15px
+// Порядок работ конец
+// Почему мы
+.cont
+    display: flex
+    justify-content: center
+    width: calc( ( 100vw / 1920 ) * 815)
+    &__num
+        align-self: center
+        height: 100%
+        @include text(#00A3AF,60,bold)
+        padding-right: 20px
+    &__txt
+        &>h3
+            @include text(#00A3AF ,30 ,bold )
+        &>p
+            @include text(#191722 ,20 ,bold )
+.flex_col_sp
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+.et_pb_column
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+.box
+    display: flex
+    justify-content: center
+@media (max-width: 760px)
+    .cont
+        margin: auto
+        width: 90vw
+        margin-bottom: 20px    
+// Почему мы конец
+// Прайслист начало
+.prise__cont
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+.prise
+    display: flex
+    justify-content: space-between
+    &__block
+        border-bottom: 3px solid #00A3AF
+        width: 90%
+        &__head
+            display: flex
+            justify-content: space-between
+            &>h3
+                @include text(#00A3AF ,30 ,bold )
+        &__txt
+            @include text(#191722 ,20 ,regular )
+// Прайслист конец
+// ФАК главная
+.faq
+    width: calc( ( 100vw / 1920 ) * 1163)
+    & h2
+        text-align: center
+        padding: 0px
+        margin-bottom: 26px
+        @include text(#00A3AF ,40 ,bold )
+        
+    &__list
+        background-color: white
+        border-bottom-style: 3px solid #00A3AF!important
+        padding: 30px 0px
+        &>h5
+            padding: 30px 0px
+            @include text(#191722 ,20 ,bold )
+            &::before
+                @include text(#00A3AF,40 ,regular )
+                
+                
+        & p
+            @include text(#191722 ,20 ,regular )
+            
+    &__btn
+        margin-top: 30px
+        width: calc( ( 100vw / 1920 ) * 256)
+        border-radius: 50px
+        background-color: #00A3AF
+        padding: 7px 0px
+        @include text(#FFFFFF,20 ,bold )        
+#list
+    margin-top: 63px
+@media (max-width: 760px)
+    .faq
+        &__btn
+            width: 90%
+// ФАК главная конец
+// Частые поломки
+.breaking
+    background-color: #00A3AF
+    border-radius: 50px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-self: center
+    & h4
+        @include text(#FFFFFF ,30 ,bold )
+        padding-top: 40px
+        padding-bottom: 25px
+    & p
+        @include text(#FFFFFF ,20,regular )
+        padding-bottom: 40px
+        width: 100%
+    &>div
+        padding-bottom: 40px
+// Частые поломки конец

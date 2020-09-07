@@ -1,0 +1,63 @@
+@mixin text($color:white,$size:30,$weight:bold)
+    color: $color
+    font-size: calc( ( 100vw / 1920 ) * #{$size})
+    font-weight: $weight
+    @media (max-width: 760px)
+        font-size: calc( ( 100vw / 600 ) * #{$size})
+*
+    font-family: montserrat
+#footer
+    background-color: #00A3AF
+    &__map
+        &__container
+    &__contact
+        width: 80%
+        &__container
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            & h4
+                margin-bottom: 30px
+                padding: 0
+                @include text(#FFFFFF ,40 ,bold )
+                
+            & h5
+                margin-bottom: 15px
+                padding: 0
+                @include text(#FFFFFF ,30 ,bold )
+                
+            & p
+                margin-bottom: 19px
+                padding: 0
+                @include text(#FFFFFF ,20 ,regular )
+                
+                & a
+                    margin-right: 25px
+                    @include text(#FFFFFF ,20 ,regular )
+                    
+                &>img
+                    margin-right: 20px 
+                    display: inline-block
+                    color: #FFFFFF
+                    vertical-align: middle
+        &__btn
+            margin-top: 11px
+            background-color: #FFFFFF
+            border: 0px
+            background-color: white
+            border-radius: 50px
+            box-shadow: 0px 3px 6px rgba(0,0 ,0 ,0.16 )
+            margin-bottom: 30px
+            text-align: center
+            @include text(#00A3AF ,20 ,bold )
+            // &>a
+            //     padding: 5px 0px 5px 0px!important
+#time
+    margin-bottom: 30px!important
+#links
+    &>div>p>a>img:hover
+        box-shadow: 0px 3px 6px rgba(0,0 ,0 ,0.16 )
+@media (max-width: 760px)
+    #footer__map__container
+        display: none

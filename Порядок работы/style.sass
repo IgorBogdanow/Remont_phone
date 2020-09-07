@@ -1,0 +1,35 @@
+@mixin text($color:white,$size:30,$weight:bold)
+    color: $color
+    font-size: calc( ( 100vw / 1920 ) * #{$size})
+    font-weight: $weight
+    @media (max-width: 760px)
+        font-size: calc( ( 100vw / 500 ) * #{$size})
+    @media (max-width: 1100px)
+        font-size: calc( ( 100vw / 1000 ) * #{$size})
+.work
+    & h2
+        text-align: center
+        margin-bottom: 46px
+        padding: 0
+        @include text(#00A3AF ,40 ,bold) 
+    &__cards
+        width: calc( ( 100vw / 1920 ) * 1646 )
+        &__one
+            margin: 10px
+            & h4
+                text-align: center
+                padding: 0
+                margin-bottom: 15px
+                @include text(#00A3AF ,30 ,bold )
+                
+            & p
+                font-size: calc( ( 100vw / 1920 ) * 20 )
+                color: #191722
+                padding: 0
+                text-align: center
+                @include text(#191722 ,20 ,regular )               
+.et_pb_main_blurb_image
+    margin-bottom: 15px
+@media (max-width: 760px)
+    .work__cards__one
+        margin-bottom: 15px
