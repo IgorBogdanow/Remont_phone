@@ -1,0 +1,48 @@
+.breaking {
+  background-color: #00A3AF;
+  border-radius: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.breaking h4 {
+  color: #FFFFFF;
+  font-size: calc( ( 100vw / 1920 ) * 30);
+  font-weight: bold;
+  padding-top: 40px;
+  padding-bottom: 25px;
+}
+
+@media (max-width: 760px) {
+  .breaking h4 {
+    font-size: calc( ( 100vw / 600 ) * 30);
+  }
+}
+
+.breaking p {
+  color: #FFFFFF;
+  font-size: calc( ( 100vw / 1920 ) * 20);
+  font-weight: regular;
+  padding-bottom: 40px;
+}
+
+@media (max-width: 760px) {
+  .breaking p {
+    font-size: calc( ( 100vw / 600 ) * 20);
+  }
+}
+
+.breaking > div {
+  padding-bottom: 40px;
+}
+/*# sourceMappingURL=style.css.map */
