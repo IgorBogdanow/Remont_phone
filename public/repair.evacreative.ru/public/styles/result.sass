@@ -7,52 +7,13 @@
     @media screen and ( min-width: 780px )
         font-size: calc((10vw / 192) * #{$size})!important
     @media screen and ( min-width: 1920px )
-
         font-size: #{$size+px}!important
 *:not(#wpadminbar *)
     font-family: montserrat, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif!important
 #page-container
     padding-top: 0!important
-.title_page
-    & h2
-        text-align: center
-        margin-bottom: 46px
-        padding: 0
-        @include text(#00A3AF ,40 ,bold)
-//Попап контактная форма
-.evr_fb_popup_modal
-    background: unset!important
-.popup_outer_wrap .popup .evr-close
-    color: #2ea3f2!important
-    background: black!important
-#contact_form_button
-    border-radius: 50px
-    border: 3px solid #00A3AF
-    padding: 5vw
-    background-color: white
-#form_code
-    & h4
-        margin-bottom: 4vh
-        text-align: center
-        @include text(#00A3AF,30, bold, none)
-    & h5
-        margin-bottom: 4vh
-        text-align: center
-        @include text(#00A3AF,20, regular, none)
-//Контактная форма синяя
-#contact_form_blue
-    max-width: 812px
-    margin: auto
-    background-color: #00A3AF
-    border-radius: 50px
-    padding: 4vh 1vw
-    & h4
-        text-align: center
-        margin: auto
-        width: 80%
-        line-height: 1.5
-        @include text(white,30, bold, none)
-        
+
+// Иван
 // Футер-начало
 #footer
     background-color: #00A3AF
@@ -349,6 +310,46 @@ body
 // Частые поломки конец
 
 // Игорь
+//Заголовок
+.title_page
+    & h2
+        text-align: center
+        margin-bottom: 46px
+        padding: 0
+        @include text(#00A3AF ,40 ,bold)
+//Попап контактная форма
+.evr_fb_popup_modal
+    background: unset!important
+.popup_outer_wrap .popup .evr-close
+    color: #2ea3f2!important
+    background: black!important
+#contact_form_button
+    border-radius: 50px
+    border: 3px solid #00A3AF
+    padding: 5vw
+    background-color: white
+#form_code
+    & h4
+        margin-bottom: 4vh
+        text-align: center
+        @include text(#00A3AF,30, bold, none)
+    & h5
+        margin-bottom: 4vh
+        text-align: center
+        @include text(#00A3AF,20, regular, none)
+//Контактная форма синяя
+#contact_form_blue
+    max-width: 812px
+    margin: auto
+    background-color: #00A3AF
+    border-radius: 50px
+    padding: 4vh 1vw
+    & h4
+        text-align: center
+        margin: auto
+        width: 80%
+        line-height: 1.5
+        @include text(white,30, bold, none)
 // Хэдер главной
 .et_pb_fullwidth_header_container.left
     max-width: 1640px
@@ -466,44 +467,6 @@ body
             margin-bottom: 2vh
 // Хэдер ремонта
 
-// Выбор марки
-.brand_nav_bar
-    display: flex
-    flex-direction: column
-    &>a
-        align-self: center
-        margin-top: 4vh
-    & ul
-        display: flex
-        flex-direction: row
-        flex-wrap: wrap
-        justify-content: center
-        padding: 0px
-        margin: 0px
-        & li
-            border: 1px solid green
-            border-radius: 50px
-            height: 12.7vh
-            list-style: none
-            padding: 0px
-            margin: 0px
-            width: 15%
-            min-width: 165px
-            margin: 5px
-            & a
-                display: flex
-                flex-direction: row
-                height: 100%
-                justify-content: center
-                & img
-                    height: 100%
-                    border-radius: 50px
-    & .media_togle
-        display: none
-        @media screen and ( min-width: 780px )
-            display: flex
-    & .btn_togle
-        display: none
 // Меню топ
 #main-header
     display: none
