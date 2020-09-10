@@ -1,7 +1,9 @@
 * {
   font-family: montserrat;
 }
-
+.unnone{
+  display: none;
+}
 #page-container {
   padding-top: 0 !important;
 }
