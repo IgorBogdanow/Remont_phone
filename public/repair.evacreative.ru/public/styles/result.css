@@ -1076,7 +1076,7 @@ body #page-container .comment a.et_pb_button.et_pb_custom_button_icon.et_pb_more
 #contact_form_blue {
   max-width: 812px;
   margin: auto;
-  background-color: #00A3AF;
+  background-color: red;
   border-radius: 50px;
   padding: 4vh 1vw;
 }
