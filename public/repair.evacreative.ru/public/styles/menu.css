@@ -49,7 +49,7 @@
   }
 }
 
-#main_header a:nth-child(3) {
+#main_header a:nth-child(2) {
   background-color: white !important;
   border: 0px;
   border-radius: 50px;
@@ -63,13 +63,13 @@
 }
 
 @media screen and (min-width: 780px) {
-  #main_header a:nth-child(3) {
+  #main_header a:nth-child(2) {
     font-size: calc((10vw / 192) * 20) !important;
   }
 }
 
 @media screen and (min-width: 1920px) {
-  #main_header a:nth-child(3) {
+  #main_header a:nth-child(2) {
     font-size: 20px !important;
   }
 }

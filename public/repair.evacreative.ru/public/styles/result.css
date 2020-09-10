@@ -1561,7 +1561,7 @@ body #page-container .comment a.et_pb_button.et_pb_custom_button_icon.et_pb_more
         -ms-flex: 1 1 0px !important;
             flex: 1 1 0 !important;
   }
-  .nav_bar > *:nth-child(2) {
+  .nav_bar > *:nth-child(3) {
     display: none;
     min-width: 300px;
   }
@@ -1569,6 +1569,7 @@ body #page-container .comment a.et_pb_button.et_pb_custom_button_icon.et_pb_more
     display: none;
   }
   .nav_bar > *:nth-child(1) {
+    text-align: right;
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
