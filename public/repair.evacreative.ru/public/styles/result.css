@@ -32,7 +32,7 @@
 
 #footer__contact__container h4 {
   margin-bottom: 30px;
-  padding: 0;
+  padding: 10px;
   color: #FFFFFF;
   font-size: calc((100vw / 780) * 40) !important;
   font-weight: bold;
