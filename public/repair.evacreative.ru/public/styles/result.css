@@ -142,7 +142,7 @@
 }
 
 #footer__contact__container h4 {
-  margin-bottom: 30px;
+  margin-bottom: 3vh;
   padding: 0;
   color: #FFFFFF;
   font-size: calc((100vw / 780) * 40) !important;
@@ -163,7 +163,7 @@
 }
 
 #footer__contact__container h5 {
-  margin-bottom: 15px;
+  margin-bottom: 1.5vh;
   padding: 0;
   color: #FFFFFF;
   font-size: calc((100vw / 780) * 30) !important;
@@ -184,7 +184,7 @@
 }
 
 #footer__contact__container p {
-  margin-bottom: 19px;
+  margin-bottom: 2vh;
   padding: 0;
   color: #FFFFFF;
   font-size: calc((100vw / 780) * 20) !important;
