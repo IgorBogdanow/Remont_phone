@@ -1,0 +1,189 @@
+@mixin text($color:white,$size:30,$weight:bold)
+    color: $color
+    font-size: calc( ( 100vw / 1920 ) * #{$size})
+    font-weight: $weight
+    @media (max-width: 760px)
+        font-size: calc( ( 100vw / 500 ) * #{$size})
+    @media (max-width: 1100px)
+        font-size: calc( ( 100vw / 1000 ) * #{$size})
+
+.ajax-loader
+	display: none!important
+.column_1
+	input.custom_cf__phone, input.custom_cf__name,
+	input.custom_cf__phone::placeholder,
+	input.custom_cf__name::placeholder
+		width: 100%
+		display: flex
+		font-family: Montserrat, Segoe UI
+		font-size: 20px
+		@include text($color: #00A3AF,$size: 20 ,$weight: regular)		
+		padding-bottom: 0px
+		border: none!important
+		border-bottom: 3px solid #00A3AF!important
+	input.custom_cf__phone,
+	.custom_cf__politic,
+	.custom_cf__submit
+		display: block!important
+		margin-top: 35px!important
+	input.custom_cf__submit
+		@include text($color: white,$size: 20)	
+		padding: 17px 57px
+		border: none
+		border-radius: 50px
+		font-weight: bold
+		background-color: #00A3AF
+	.custom_cf__politic
+		font-family: Montserrat, Segoe UI
+		@include text($color: #00A3AF,$size: 15 ,$weight: regular)	
+	.custom_cf__politic
+		span.wpcf7-list-item-label::before
+			background-image: url("/public/svg/sf_checkbox_none.svg")
+	.custom_cf__politic
+		span.wpcf7-list-item-label.agree::before
+			background-image: url("/public/svg/sf_checkbox_agree.svg")!important
+	p
+		padding-bottom: 0px
+
+.row_blue_white, .row_white_blue, .row_review_1, .row_question_1
+	display: flex
+	flex-direction: row
+	flex-wrap: wrap
+	justify-content: space-between
+	p
+		display: flex
+		padding: 0px		
+		&:nth-child(-n+2), &:nth-child(4)
+			width: calc(33% - 20px)	
+		&:nth-child(-n+3)
+			
+		&:nth-child(3)
+			order: 2
+			width: 100%
+		&	
+			input.custom_cf__phone, input.custom_cf__name,
+			input.custom_cf__phone::placeholder,
+			input.custom_cf__name::placeholder
+				height: 100%
+				margin-top: 0
+				border-top: 0
+				border-left: 0
+				border-right: 0
+				background-color: unset
+			input.custom_cf__submit
+				padding: 18px
+				border: unset
+				border-radius: 25px
+			input.custom_cf__phone, 
+			input.custom_cf__name,
+			input.custom_cf__phone::placeholder,
+			input.custom_cf__name::placeholder,
+			input.custom_cf__submit
+				display: block
+				width: 100%	
+.row_blue_white
+	background-color: #00A3AF
+	input.custom_cf__phone, input.custom_cf__name,
+	input.custom_cf__phone::placeholder,
+	input.custom_cf__name::placeholder
+		@include text($color: white,$size: 20 ,$weight: regular)
+		border-bottom: 3px solid white
+	input.custom_cf__submit
+		@include text($color: #00A3AF,$size: 20)
+		background-color: white
+	.custom_cf__politic
+		font-family: Montserrat, Segoe UI
+		@include text($color: white,$size: 15 ,$weight: regular)
+	.custom_cf__politic
+		span.wpcf7-list-item-label::before
+			background-image: url("/public/svg/sf_checkbox_none_white.svg")
+	.custom_cf__politic
+		span.wpcf7-list-item-label.agree::before
+			background-image: url("/public/svg/sf_checkbox_agree_white.svg")!important
+.row_white_blue, .row_review_1, .row_question_1
+	background-color: white
+	input.custom_cf__phone, input.custom_cf__name,
+	input.custom_cf__phone::placeholder,
+	input.custom_cf__name::placeholder
+		@include text($color: #00A3AF,$size: 20 ,$weight: regular)
+		border-bottom: 3px solid #00A3AF
+	input.custom_cf__submit
+		@include text($color: white,$size: 20)
+		background-color: #00A3AF
+	.custom_cf__politic
+		font-family: Montserrat, Segoe UI
+		@include text($color: #00A3AF,$size: 15 ,$weight: regular)
+	.custom_cf__politic
+		span.wpcf7-list-item-label::before
+			background-image: url("/public/svg/sf_checkbox_none.svg")
+	.custom_cf__politic
+		span.wpcf7-list-item-label.agree::before
+			background-image: url("/public/svg/sf_checkbox_agree.svg")!important
+.row_review_1, .row_question_1
+	p
+		span[class*="textarea-"]
+			width: 100%
+			textarea
+				border-top: unset
+				border-left: unset
+				border-right: unset
+				height: 90px
+				width: 100%
+				@include text($color: #00A3AF,$size: 20 ,$weight: regular)
+				border-bottom: 3px solid #00A3AF
+				&::placeholder
+					@include text($color: #00A3AF,$size: 20 ,$weight: regular)
+		&:nth-child(1), &:nth-child(2), &:nth-child(4)
+			order: 1
+		&:nth-child(5)
+			order: 0
+			width: 100%
+		
+
+// .row_white_blue
+// 	background-color: #00A3AF
+
+
+
+// 
+/*Button*/
+// 
+
+
+	
+.custom_cf__submit
+	display: flex
+	margin: auto
+
+// 
+// Politic
+// 
+
+.custom_cf__politic
+	.wpcf7-list-item-label
+		display: flex
+		align-items: center
+
+.custom_cf__politic
+	span.wpcf7-list-item-label::before
+		content: ""
+		display: inline-block
+		margin-right: 10px
+		width: 35px
+		height: 35px
+		background-position: center
+		background-size: contain
+		background-repeat: no-repeat
+	
+.custom_cf__politic
+	span.wpcf7-list-item-label.agree::before
+
+.custom_cf__politic
+	input[type="checkbox"]
+		display: none
+
+.custom_cf__politic
+	.wpcf7-list-item
+		margin-left: 0
+
+
