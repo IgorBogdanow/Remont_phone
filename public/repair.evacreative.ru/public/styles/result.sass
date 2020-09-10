@@ -1,4 +1,4 @@
-
+// @import menu
 @mixin text($color: white,$size: 30, $weight: bold, $decor: none,)
     color: $color
     font-size: calc((100vw / 780) * #{$size})!important
@@ -204,8 +204,11 @@
         @include text(#00A3AF ,40 ,bold )
         text-align: center
         margin-bottom: 50px
-    a
-        color:red!important
+body
+    #page-container
+        .comment
+            a.et_pb_button.et_pb_custom_button_icon.et_pb_more_button
+                @include text(#00A3AF ,20 ,bold )
 // Слайдер с комментами заголовок конец
 // Порядок работ
 .work
@@ -505,34 +508,51 @@
 #main-header
     display: none
 .nav_bar
+    @media screen and ( max-width: 780px )
+        &
+            flex-flow: row wrap
+            justify-content: space-between
+            > *
+                flex: 1 1 0!important
+                &:nth-child(2)
+                    display: none
+                    // flex: 0 0 3000px
+                    min-width: 300px
+                &:nth-child(4)
+                    display: none
+                &:nth-child(1)
+                    order: 1
+                    margin-left: 25px
+                    
     padding-top: 2vh
     padding-bottom: 2vh
     & li
         list-style: none
     display: flex
-    flex-direction: row
+    flex-flow: row wrap
     justify-content: space-between
     align-items: center
+    > *
+        flex: 1 1 auto
     & > a:nth-child(1)
-        width: 25%
         @include text(#16AAB5,30, bold, underline)
     & div
-        width: 25%
         display: flex
         justify-content: flex-end
-        & > a:last-child
+        > a:last-child
             @include text(white!important,20,bold, none)
             background-color: #16AAB5
             padding: 20px 30px
             border-radius: 50px
+            display: flex
+            flex-flow: row nowrap
+            border: 3px solid white
+            transition: .3s
             &:hover
-                &::after
-                        content: url(/arrow_right.svg)
-                        margin-left: 20px
-                        vertical-align: center
-                        height: 25px
+                background-color: white
+                border: 3px solid #16AAB5
+                color: #16AAB5!important
     & ul
-        width: 25%
         padding: 0px
         display: flex
         flex-direction: column
@@ -645,7 +665,9 @@
 			input.custom_cf__name::placeholder,
 			input.custom_cf__submit
 				display: block
-				width: 100%	
+				width: 100%
+    .wpcf7-response-output
+        @include text($color: #00A3AF,$size: 20 ,$weight: regular)
 .row_blue_white
 	background-color: #00A3AF
 	input.custom_cf__phone, input.custom_cf__name,
@@ -665,6 +687,11 @@
 	.custom_cf__politic
 		span.wpcf7-list-item-label.agree::before
 			background-image: url("/public/svg/sf_checkbox_agree_white.svg")!important
+	.wpcf7-response-output
+		@include text($color: white,$size: 20 ,$weight: regular)
+		color:white!important
+
+
 .row_white_blue, .row_review_1, .row_question_1
 	background-color: white
 	input.custom_cf__phone, input.custom_cf__name,
@@ -684,6 +711,10 @@
 	.custom_cf__politic
 		span.wpcf7-list-item-label.agree::before
 			background-image: url("/public/svg/sf_checkbox_agree.svg")!important
+	.wpcf7-response-output
+		@include text($color: #00A3AF,$size: 20 ,$weight: regular)
+		color:#00A3AF!important
+
 .row_review_1, .row_question_1
 	p
 		span[class*="textarea-"]
@@ -703,7 +734,20 @@
 		&:nth-child(5)
 			order: 0
 			width: 100%
-		
+.custom_cf__submit
+    transition: .3s
+    border: 3px solid white!important
+    cursor: pointer
+    &:hover
+        border-color: white!important
+        background-color: #00A3AF!important
+        color:white!important
+.wpcf7-not-valid-tip
+    display: none
+.wpcf7-response-output
+    border-width: 4px!important
+    margin: 5px 0px!important        
+
 
 // .row_white_blue
 // 	background-color: #00A3AF

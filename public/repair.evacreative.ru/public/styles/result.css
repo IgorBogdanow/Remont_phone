@@ -621,8 +621,23 @@
   }
 }
 
-.comment a {
-  color: red !important;
+body #page-container .comment a.et_pb_button.et_pb_custom_button_icon.et_pb_more_button {
+  color: #00A3AF;
+  font-size: calc((100vw / 780) * 20) !important;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 780px) {
+  body #page-container .comment a.et_pb_button.et_pb_custom_button_icon.et_pb_more_button {
+    font-size: calc((10vw / 192) * 20) !important;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  body #page-container .comment a.et_pb_button.et_pb_custom_button_icon.et_pb_more_button {
+    font-size: 20px !important;
+  }
 }
 
 .work h2 {
@@ -1521,8 +1536,8 @@
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -1531,12 +1546,47 @@
           align-items: center;
 }
 
+@media screen and (max-width: 780px) {
+  .nav_bar {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .nav_bar > * {
+    -webkit-box-flex: 1 !important;
+        -ms-flex: 1 1 0px !important;
+            flex: 1 1 0 !important;
+  }
+  .nav_bar > *:nth-child(2) {
+    display: none;
+    min-width: 300px;
+  }
+  .nav_bar > *:nth-child(4) {
+    display: none;
+  }
+  .nav_bar > *:nth-child(1) {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    margin-left: 25px;
+  }
+}
+
 .nav_bar li {
   list-style: none;
 }
 
+.nav_bar > * {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
 .nav_bar > a:nth-child(1) {
-  width: 25%;
   color: #16AAB5;
   font-size: calc((100vw / 780) * 30) !important;
   font-weight: bold;
@@ -1556,7 +1606,6 @@
 }
 
 .nav_bar div {
-  width: 25%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1573,6 +1622,16 @@
   background-color: #16AAB5;
   padding: 20px 30px;
   border-radius: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  border: 3px solid white;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 @media screen and (min-width: 780px) {
@@ -1587,15 +1646,13 @@
   }
 }
 
-.nav_bar div > a:last-child:hover::after {
-  content: url(/arrow_right.svg);
-  margin-left: 20px;
-  vertical-align: center;
-  height: 25px;
+.nav_bar div > a:last-child:hover {
+  background-color: white;
+  border: 3px solid #16AAB5;
+  color: #16AAB5 !important;
 }
 
 .nav_bar ul {
-  width: 25%;
   padding: 0px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2108,6 +2165,256 @@
   width: 100%;
 }
 
+.row_blue_white p input.custom_cf__phone .wpcf7-response-output,
+.row_blue_white p input.custom_cf__name .wpcf7-response-output,
+.row_blue_white p input.custom_cf__phone::-webkit-input-placeholder .wpcf7-response-output,
+.row_blue_white p input.custom_cf__name::-webkit-input-placeholder .wpcf7-response-output,
+.row_blue_white p input.custom_cf__submit .wpcf7-response-output, .row_white_blue p input.custom_cf__phone .wpcf7-response-output,
+.row_white_blue p input.custom_cf__name .wpcf7-response-output,
+.row_white_blue p input.custom_cf__phone::-webkit-input-placeholder .wpcf7-response-output,
+.row_white_blue p input.custom_cf__name::-webkit-input-placeholder .wpcf7-response-output,
+.row_white_blue p input.custom_cf__submit .wpcf7-response-output, .row_review_1 p input.custom_cf__phone .wpcf7-response-output,
+.row_review_1 p input.custom_cf__name .wpcf7-response-output,
+.row_review_1 p input.custom_cf__phone::-webkit-input-placeholder .wpcf7-response-output,
+.row_review_1 p input.custom_cf__name::-webkit-input-placeholder .wpcf7-response-output,
+.row_review_1 p input.custom_cf__submit .wpcf7-response-output, .row_question_1 p input.custom_cf__phone .wpcf7-response-output,
+.row_question_1 p input.custom_cf__name .wpcf7-response-output,
+.row_question_1 p input.custom_cf__phone::-webkit-input-placeholder .wpcf7-response-output,
+.row_question_1 p input.custom_cf__name::-webkit-input-placeholder .wpcf7-response-output,
+.row_question_1 p input.custom_cf__submit .wpcf7-response-output {
+  color: #00A3AF;
+  font-size: calc((100vw / 780) * 20) !important;
+  font-weight: regular;
+  text-decoration: none;
+}
+
+.row_blue_white p input.custom_cf__phone .wpcf7-response-output,
+.row_blue_white p input.custom_cf__name .wpcf7-response-output,
+.row_blue_white p input.custom_cf__phone:-ms-input-placeholder .wpcf7-response-output,
+.row_blue_white p input.custom_cf__name:-ms-input-placeholder .wpcf7-response-output,
+.row_blue_white p input.custom_cf__submit .wpcf7-response-output, .row_white_blue p input.custom_cf__phone .wpcf7-response-output,
+.row_white_blue p input.custom_cf__name .wpcf7-response-output,
+.row_white_blue p input.custom_cf__phone:-ms-input-placeholder .wpcf7-response-output,
+.row_white_blue p input.custom_cf__name:-ms-input-placeholder .wpcf7-response-output,
+.row_white_blue p input.custom_cf__submit .wpcf7-response-output, .row_review_1 p input.custom_cf__phone .wpcf7-response-output,
+.row_review_1 p input.custom_cf__name .wpcf7-response-output,
+.row_review_1 p input.custom_cf__phone:-ms-input-placeholder .wpcf7-response-output,
+.row_review_1 p input.custom_cf__name:-ms-input-placeholder .wpcf7-response-output,
+.row_review_1 p input.custom_cf__submit .wpcf7-response-output, .row_question_1 p input.custom_cf__phone .wpcf7-response-output,
+.row_question_1 p input.custom_cf__name .wpcf7-response-output,
+.row_question_1 p input.custom_cf__phone:-ms-input-placeholder .wpcf7-response-output,
+.row_question_1 p input.custom_cf__name:-ms-input-placeholder .wpcf7-response-output,
+.row_question_1 p input.custom_cf__submit .wpcf7-response-output {
+  color: #00A3AF;
+  font-size: calc((100vw / 780) * 20) !important;
+  font-weight: regular;
+  text-decoration: none;
+}
+
+.row_blue_white p input.custom_cf__phone .wpcf7-response-output,
+.row_blue_white p input.custom_cf__name .wpcf7-response-output,
+.row_blue_white p input.custom_cf__phone::-ms-input-placeholder .wpcf7-response-output,
+.row_blue_white p input.custom_cf__name::-ms-input-placeholder .wpcf7-response-output,
+.row_blue_white p input.custom_cf__submit .wpcf7-response-output, .row_white_blue p input.custom_cf__phone .wpcf7-response-output,
+.row_white_blue p input.custom_cf__name .wpcf7-response-output,
+.row_white_blue p input.custom_cf__phone::-ms-input-placeholder .wpcf7-response-output,
+.row_white_blue p input.custom_cf__name::-ms-input-placeholder .wpcf7-response-output,
+.row_white_blue p input.custom_cf__submit .wpcf7-response-output, .row_review_1 p input.custom_cf__phone .wpcf7-response-output,
+.row_review_1 p input.custom_cf__name .wpcf7-response-output,
+.row_review_1 p input.custom_cf__phone::-ms-input-placeholder .wpcf7-response-output,
+.row_review_1 p input.custom_cf__name::-ms-input-placeholder .wpcf7-response-output,
+.row_review_1 p input.custom_cf__submit .wpcf7-response-output, .row_question_1 p input.custom_cf__phone .wpcf7-response-output,
+.row_question_1 p input.custom_cf__name .wpcf7-response-output,
+.row_question_1 p input.custom_cf__phone::-ms-input-placeholder .wpcf7-response-output,
+.row_question_1 p input.custom_cf__name::-ms-input-placeholder .wpcf7-response-output,
+.row_question_1 p input.custom_cf__submit .wpcf7-response-output {
+  color: #00A3AF;
+  font-size: calc((100vw / 780) * 20) !important;
+  font-weight: regular;
+  text-decoration: none;
+}
+
+.row_blue_white p input.custom_cf__phone .wpcf7-response-output,
+.row_blue_white p input.custom_cf__name .wpcf7-response-output,
+.row_blue_white p input.custom_cf__phone::placeholder .wpcf7-response-output,
+.row_blue_white p input.custom_cf__name::placeholder .wpcf7-response-output,
+.row_blue_white p input.custom_cf__submit .wpcf7-response-output, .row_white_blue p input.custom_cf__phone .wpcf7-response-output,
+.row_white_blue p input.custom_cf__name .wpcf7-response-output,
+.row_white_blue p input.custom_cf__phone::placeholder .wpcf7-response-output,
+.row_white_blue p input.custom_cf__name::placeholder .wpcf7-response-output,
+.row_white_blue p input.custom_cf__submit .wpcf7-response-output, .row_review_1 p input.custom_cf__phone .wpcf7-response-output,
+.row_review_1 p input.custom_cf__name .wpcf7-response-output,
+.row_review_1 p input.custom_cf__phone::placeholder .wpcf7-response-output,
+.row_review_1 p input.custom_cf__name::placeholder .wpcf7-response-output,
+.row_review_1 p input.custom_cf__submit .wpcf7-response-output, .row_question_1 p input.custom_cf__phone .wpcf7-response-output,
+.row_question_1 p input.custom_cf__name .wpcf7-response-output,
+.row_question_1 p input.custom_cf__phone::placeholder .wpcf7-response-output,
+.row_question_1 p input.custom_cf__name::placeholder .wpcf7-response-output,
+.row_question_1 p input.custom_cf__submit .wpcf7-response-output {
+  color: #00A3AF;
+  font-size: calc((100vw / 780) * 20) !important;
+  font-weight: regular;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 780px) {
+  .row_blue_white p input.custom_cf__phone .wpcf7-response-output,
+  .row_blue_white p input.custom_cf__name .wpcf7-response-output,
+  .row_blue_white p input.custom_cf__phone::-webkit-input-placeholder .wpcf7-response-output,
+  .row_blue_white p input.custom_cf__name::-webkit-input-placeholder .wpcf7-response-output,
+  .row_blue_white p input.custom_cf__submit .wpcf7-response-output, .row_white_blue p input.custom_cf__phone .wpcf7-response-output,
+  .row_white_blue p input.custom_cf__name .wpcf7-response-output,
+  .row_white_blue p input.custom_cf__phone::-webkit-input-placeholder .wpcf7-response-output,
+  .row_white_blue p input.custom_cf__name::-webkit-input-placeholder .wpcf7-response-output,
+  .row_white_blue p input.custom_cf__submit .wpcf7-response-output, .row_review_1 p input.custom_cf__phone .wpcf7-response-output,
+  .row_review_1 p input.custom_cf__name .wpcf7-response-output,
+  .row_review_1 p input.custom_cf__phone::-webkit-input-placeholder .wpcf7-response-output,
+  .row_review_1 p input.custom_cf__name::-webkit-input-placeholder .wpcf7-response-output,
+  .row_review_1 p input.custom_cf__submit .wpcf7-response-output, .row_question_1 p input.custom_cf__phone .wpcf7-response-output,
+  .row_question_1 p input.custom_cf__name .wpcf7-response-output,
+  .row_question_1 p input.custom_cf__phone::-webkit-input-placeholder .wpcf7-response-output,
+  .row_question_1 p input.custom_cf__name::-webkit-input-placeholder .wpcf7-response-output,
+  .row_question_1 p input.custom_cf__submit .wpcf7-response-output {
+    font-size: calc((10vw / 192) * 20) !important;
+  }
+  .row_blue_white p input.custom_cf__phone .wpcf7-response-output,
+  .row_blue_white p input.custom_cf__name .wpcf7-response-output,
+  .row_blue_white p input.custom_cf__phone:-ms-input-placeholder .wpcf7-response-output,
+  .row_blue_white p input.custom_cf__name:-ms-input-placeholder .wpcf7-response-output,
+  .row_blue_white p input.custom_cf__submit .wpcf7-response-output, .row_white_blue p input.custom_cf__phone .wpcf7-response-output,
+  .row_white_blue p input.custom_cf__name .wpcf7-response-output,
+  .row_white_blue p input.custom_cf__phone:-ms-input-placeholder .wpcf7-response-output,
+  .row_white_blue p input.custom_cf__name:-ms-input-placeholder .wpcf7-response-output,
+  .row_white_blue p input.custom_cf__submit .wpcf7-response-output, .row_review_1 p input.custom_cf__phone .wpcf7-response-output,
+  .row_review_1 p input.custom_cf__name .wpcf7-response-output,
+  .row_review_1 p input.custom_cf__phone:-ms-input-placeholder .wpcf7-response-output,
+  .row_review_1 p input.custom_cf__name:-ms-input-placeholder .wpcf7-response-output,
+  .row_review_1 p input.custom_cf__submit .wpcf7-response-output, .row_question_1 p input.custom_cf__phone .wpcf7-response-output,
+  .row_question_1 p input.custom_cf__name .wpcf7-response-output,
+  .row_question_1 p input.custom_cf__phone:-ms-input-placeholder .wpcf7-response-output,
+  .row_question_1 p input.custom_cf__name:-ms-input-placeholder .wpcf7-response-output,
+  .row_question_1 p input.custom_cf__submit .wpcf7-response-output {
+    font-size: calc((10vw / 192) * 20) !important;
+  }
+  .row_blue_white p input.custom_cf__phone .wpcf7-response-output,
+  .row_blue_white p input.custom_cf__name .wpcf7-response-output,
+  .row_blue_white p input.custom_cf__phone::-ms-input-placeholder .wpcf7-response-output,
+  .row_blue_white p input.custom_cf__name::-ms-input-placeholder .wpcf7-response-output,
+  .row_blue_white p input.custom_cf__submit .wpcf7-response-output, .row_white_blue p input.custom_cf__phone .wpcf7-response-output,
+  .row_white_blue p input.custom_cf__name .wpcf7-response-output,
+  .row_white_blue p input.custom_cf__phone::-ms-input-placeholder .wpcf7-response-output,
+  .row_white_blue p input.custom_cf__name::-ms-input-placeholder .wpcf7-response-output,
+  .row_white_blue p input.custom_cf__submit .wpcf7-response-output, .row_review_1 p input.custom_cf__phone .wpcf7-response-output,
+  .row_review_1 p input.custom_cf__name .wpcf7-response-output,
+  .row_review_1 p input.custom_cf__phone::-ms-input-placeholder .wpcf7-response-output,
+  .row_review_1 p input.custom_cf__name::-ms-input-placeholder .wpcf7-response-output,
+  .row_review_1 p input.custom_cf__submit .wpcf7-response-output, .row_question_1 p input.custom_cf__phone .wpcf7-response-output,
+  .row_question_1 p input.custom_cf__name .wpcf7-response-output,
+  .row_question_1 p input.custom_cf__phone::-ms-input-placeholder .wpcf7-response-output,
+  .row_question_1 p input.custom_cf__name::-ms-input-placeholder .wpcf7-response-output,
+  .row_question_1 p input.custom_cf__submit .wpcf7-response-output {
+    font-size: calc((10vw / 192) * 20) !important;
+  }
+  .row_blue_white p input.custom_cf__phone .wpcf7-response-output,
+  .row_blue_white p input.custom_cf__name .wpcf7-response-output,
+  .row_blue_white p input.custom_cf__phone::placeholder .wpcf7-response-output,
+  .row_blue_white p input.custom_cf__name::placeholder .wpcf7-response-output,
+  .row_blue_white p input.custom_cf__submit .wpcf7-response-output, .row_white_blue p input.custom_cf__phone .wpcf7-response-output,
+  .row_white_blue p input.custom_cf__name .wpcf7-response-output,
+  .row_white_blue p input.custom_cf__phone::placeholder .wpcf7-response-output,
+  .row_white_blue p input.custom_cf__name::placeholder .wpcf7-response-output,
+  .row_white_blue p input.custom_cf__submit .wpcf7-response-output, .row_review_1 p input.custom_cf__phone .wpcf7-response-output,
+  .row_review_1 p input.custom_cf__name .wpcf7-response-output,
+  .row_review_1 p input.custom_cf__phone::placeholder .wpcf7-response-output,
+  .row_review_1 p input.custom_cf__name::placeholder .wpcf7-response-output,
+  .row_review_1 p input.custom_cf__submit .wpcf7-response-output, .row_question_1 p input.custom_cf__phone .wpcf7-response-output,
+  .row_question_1 p input.custom_cf__name .wpcf7-response-output,
+  .row_question_1 p input.custom_cf__phone::placeholder .wpcf7-response-output,
+  .row_question_1 p input.custom_cf__name::placeholder .wpcf7-response-output,
+  .row_question_1 p input.custom_cf__submit .wpcf7-response-output {
+    font-size: calc((10vw / 192) * 20) !important;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .row_blue_white p input.custom_cf__phone .wpcf7-response-output,
+  .row_blue_white p input.custom_cf__name .wpcf7-response-output,
+  .row_blue_white p input.custom_cf__phone::-webkit-input-placeholder .wpcf7-response-output,
+  .row_blue_white p input.custom_cf__name::-webkit-input-placeholder .wpcf7-response-output,
+  .row_blue_white p input.custom_cf__submit .wpcf7-response-output, .row_white_blue p input.custom_cf__phone .wpcf7-response-output,
+  .row_white_blue p input.custom_cf__name .wpcf7-response-output,
+  .row_white_blue p input.custom_cf__phone::-webkit-input-placeholder .wpcf7-response-output,
+  .row_white_blue p input.custom_cf__name::-webkit-input-placeholder .wpcf7-response-output,
+  .row_white_blue p input.custom_cf__submit .wpcf7-response-output, .row_review_1 p input.custom_cf__phone .wpcf7-response-output,
+  .row_review_1 p input.custom_cf__name .wpcf7-response-output,
+  .row_review_1 p input.custom_cf__phone::-webkit-input-placeholder .wpcf7-response-output,
+  .row_review_1 p input.custom_cf__name::-webkit-input-placeholder .wpcf7-response-output,
+  .row_review_1 p input.custom_cf__submit .wpcf7-response-output, .row_question_1 p input.custom_cf__phone .wpcf7-response-output,
+  .row_question_1 p input.custom_cf__name .wpcf7-response-output,
+  .row_question_1 p input.custom_cf__phone::-webkit-input-placeholder .wpcf7-response-output,
+  .row_question_1 p input.custom_cf__name::-webkit-input-placeholder .wpcf7-response-output,
+  .row_question_1 p input.custom_cf__submit .wpcf7-response-output {
+    font-size: 20px !important;
+  }
+  .row_blue_white p input.custom_cf__phone .wpcf7-response-output,
+  .row_blue_white p input.custom_cf__name .wpcf7-response-output,
+  .row_blue_white p input.custom_cf__phone:-ms-input-placeholder .wpcf7-response-output,
+  .row_blue_white p input.custom_cf__name:-ms-input-placeholder .wpcf7-response-output,
+  .row_blue_white p input.custom_cf__submit .wpcf7-response-output, .row_white_blue p input.custom_cf__phone .wpcf7-response-output,
+  .row_white_blue p input.custom_cf__name .wpcf7-response-output,
+  .row_white_blue p input.custom_cf__phone:-ms-input-placeholder .wpcf7-response-output,
+  .row_white_blue p input.custom_cf__name:-ms-input-placeholder .wpcf7-response-output,
+  .row_white_blue p input.custom_cf__submit .wpcf7-response-output, .row_review_1 p input.custom_cf__phone .wpcf7-response-output,
+  .row_review_1 p input.custom_cf__name .wpcf7-response-output,
+  .row_review_1 p input.custom_cf__phone:-ms-input-placeholder .wpcf7-response-output,
+  .row_review_1 p input.custom_cf__name:-ms-input-placeholder .wpcf7-response-output,
+  .row_review_1 p input.custom_cf__submit .wpcf7-response-output, .row_question_1 p input.custom_cf__phone .wpcf7-response-output,
+  .row_question_1 p input.custom_cf__name .wpcf7-response-output,
+  .row_question_1 p input.custom_cf__phone:-ms-input-placeholder .wpcf7-response-output,
+  .row_question_1 p input.custom_cf__name:-ms-input-placeholder .wpcf7-response-output,
+  .row_question_1 p input.custom_cf__submit .wpcf7-response-output {
+    font-size: 20px !important;
+  }
+  .row_blue_white p input.custom_cf__phone .wpcf7-response-output,
+  .row_blue_white p input.custom_cf__name .wpcf7-response-output,
+  .row_blue_white p input.custom_cf__phone::-ms-input-placeholder .wpcf7-response-output,
+  .row_blue_white p input.custom_cf__name::-ms-input-placeholder .wpcf7-response-output,
+  .row_blue_white p input.custom_cf__submit .wpcf7-response-output, .row_white_blue p input.custom_cf__phone .wpcf7-response-output,
+  .row_white_blue p input.custom_cf__name .wpcf7-response-output,
+  .row_white_blue p input.custom_cf__phone::-ms-input-placeholder .wpcf7-response-output,
+  .row_white_blue p input.custom_cf__name::-ms-input-placeholder .wpcf7-response-output,
+  .row_white_blue p input.custom_cf__submit .wpcf7-response-output, .row_review_1 p input.custom_cf__phone .wpcf7-response-output,
+  .row_review_1 p input.custom_cf__name .wpcf7-response-output,
+  .row_review_1 p input.custom_cf__phone::-ms-input-placeholder .wpcf7-response-output,
+  .row_review_1 p input.custom_cf__name::-ms-input-placeholder .wpcf7-response-output,
+  .row_review_1 p input.custom_cf__submit .wpcf7-response-output, .row_question_1 p input.custom_cf__phone .wpcf7-response-output,
+  .row_question_1 p input.custom_cf__name .wpcf7-response-output,
+  .row_question_1 p input.custom_cf__phone::-ms-input-placeholder .wpcf7-response-output,
+  .row_question_1 p input.custom_cf__name::-ms-input-placeholder .wpcf7-response-output,
+  .row_question_1 p input.custom_cf__submit .wpcf7-response-output {
+    font-size: 20px !important;
+  }
+  .row_blue_white p input.custom_cf__phone .wpcf7-response-output,
+  .row_blue_white p input.custom_cf__name .wpcf7-response-output,
+  .row_blue_white p input.custom_cf__phone::placeholder .wpcf7-response-output,
+  .row_blue_white p input.custom_cf__name::placeholder .wpcf7-response-output,
+  .row_blue_white p input.custom_cf__submit .wpcf7-response-output, .row_white_blue p input.custom_cf__phone .wpcf7-response-output,
+  .row_white_blue p input.custom_cf__name .wpcf7-response-output,
+  .row_white_blue p input.custom_cf__phone::placeholder .wpcf7-response-output,
+  .row_white_blue p input.custom_cf__name::placeholder .wpcf7-response-output,
+  .row_white_blue p input.custom_cf__submit .wpcf7-response-output, .row_review_1 p input.custom_cf__phone .wpcf7-response-output,
+  .row_review_1 p input.custom_cf__name .wpcf7-response-output,
+  .row_review_1 p input.custom_cf__phone::placeholder .wpcf7-response-output,
+  .row_review_1 p input.custom_cf__name::placeholder .wpcf7-response-output,
+  .row_review_1 p input.custom_cf__submit .wpcf7-response-output, .row_question_1 p input.custom_cf__phone .wpcf7-response-output,
+  .row_question_1 p input.custom_cf__name .wpcf7-response-output,
+  .row_question_1 p input.custom_cf__phone::placeholder .wpcf7-response-output,
+  .row_question_1 p input.custom_cf__name::placeholder .wpcf7-response-output,
+  .row_question_1 p input.custom_cf__submit .wpcf7-response-output {
+    font-size: 20px !important;
+  }
+}
+
 .row_blue_white {
   background-color: #00A3AF;
 }
@@ -2244,6 +2551,26 @@
 
 .row_blue_white .custom_cf__politic span.wpcf7-list-item-label.agree::before {
   background-image: url("/public/svg/sf_checkbox_agree_white.svg") !important;
+}
+
+.row_blue_white .wpcf7-response-output {
+  color: white;
+  font-size: calc((100vw / 780) * 20) !important;
+  font-weight: regular;
+  text-decoration: none;
+  color: white !important;
+}
+
+@media screen and (min-width: 780px) {
+  .row_blue_white .wpcf7-response-output {
+    font-size: calc((10vw / 192) * 20) !important;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .row_blue_white .wpcf7-response-output {
+    font-size: 20px !important;
+  }
 }
 
 .row_white_blue, .row_review_1, .row_question_1 {
@@ -2432,6 +2759,26 @@
   background-image: url("/public/svg/sf_checkbox_agree.svg") !important;
 }
 
+.row_white_blue .wpcf7-response-output, .row_review_1 .wpcf7-response-output, .row_question_1 .wpcf7-response-output {
+  color: #00A3AF;
+  font-size: calc((100vw / 780) * 20) !important;
+  font-weight: regular;
+  text-decoration: none;
+  color: #00A3AF !important;
+}
+
+@media screen and (min-width: 780px) {
+  .row_white_blue .wpcf7-response-output, .row_review_1 .wpcf7-response-output, .row_question_1 .wpcf7-response-output {
+    font-size: calc((10vw / 192) * 20) !important;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .row_white_blue .wpcf7-response-output, .row_review_1 .wpcf7-response-output, .row_question_1 .wpcf7-response-output {
+    font-size: 20px !important;
+  }
+}
+
 .row_review_1 p span[class*="textarea-"], .row_question_1 p span[class*="textarea-"] {
   width: 100%;
 }
@@ -2530,6 +2877,28 @@
       -ms-flex-order: 0;
           order: 0;
   width: 100%;
+}
+
+.custom_cf__submit {
+  -webkit-transition: .3s;
+  transition: .3s;
+  border: 3px solid white !important;
+  cursor: pointer;
+}
+
+.custom_cf__submit:hover {
+  border-color: white !important;
+  background-color: #00A3AF !important;
+  color: white !important;
+}
+
+.wpcf7-not-valid-tip {
+  display: none;
+}
+
+.wpcf7-response-output {
+  border-width: 4px !important;
+  margin: 5px 0px !important;
 }
 
 /*Button*/
