@@ -1,0 +1,68 @@
+#contact_form_transporant {
+  background-color: transparent;
+  max-width: 1194px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#contact_form_transporant .et_pb_code_inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#contact_form_transporant h4 {
+  color: #00A3AF;
+  font-size: calc( ( 100vw / 1920 ) * 30);
+  font-weight: bold;
+  font-family: montserrat;
+  width: 100%;
+  text-align: center;
+}
+
+@media (max-width: 760px) {
+  #contact_form_transporant h4 {
+    font-size: calc( ( 100vw / 500 ) * 30);
+  }
+}
+
+#contact_form_transporant #wpcf7-f839-p991-o1 {
+  max-width: 770px;
+  margin: auto;
+}
+
+#contact_form_transporant #wpcf7-f839-p991-o1 p:nth-child(3) {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (max-width: 760px) {
+  #contact_form_transporant .cf-custom .row_white_blue {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #contact_form_transporant p {
+    width: 90%;
+    margin: auto;
+    padding-bottom: 20px;
+  }
+  #contact_form_transporant p span {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

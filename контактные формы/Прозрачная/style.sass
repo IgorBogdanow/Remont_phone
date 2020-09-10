@@ -1,0 +1,35 @@
+@mixin text($color:white,$size:30,$weight:bold)
+    color: $color
+    font-size: calc( ( 100vw / 1920 ) * #{$size})
+    font-weight: $weight
+    @media (max-width: 760px)
+        font-size: calc( ( 100vw / 500 ) * #{$size})
+#contact_form_transporant
+    background-color: transparent
+    max-width: 1194px
+    display: flex
+    flex-direction: column
+    & .et_pb_code_inner
+        display: flex
+        flex-direction: column
+    & h4
+        @include text(#00A3AF,30 ,bold )
+        font-family: montserrat
+        width: 100%
+        text-align: center
+    & #wpcf7-f839-p991-o1
+        max-width: 770px
+        margin: auto
+        & p:nth-child(3) 
+            justify-content: center
+@media ( max-width: 760px )
+    #contact_form_transporant
+        & .cf-custom .row_white_blue
+            flex-direction: column
+            align-items: center
+        & p
+            width: 90%
+            margin: auto
+            padding-bottom: 20px
+            & span
+                width: 100%
