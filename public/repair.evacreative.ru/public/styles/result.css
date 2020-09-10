@@ -6,6 +6,10 @@
   padding-top: 0 !important;
 }
 
+#zalupa {
+  background-color: red;
+}
+
 #footer {
   background-color: #00A3AF;
 }
