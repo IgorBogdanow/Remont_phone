@@ -1,0 +1,32 @@
+#contact_form_question {
+  color: #00A3AF;
+  font-size: calc( ( 100vw / 1920 ) * 20);
+  font-weight: regular;
+}
+
+@media (max-width: 760px) {
+  #contact_form_question {
+    font-size: calc( ( 100vw / 500 ) * 20);
+  }
+}
+
+@media (max-width: 760px) {
+  #contact_form_question .cf-custom .row_review_1 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #contact_form_question p {
+    width: 90%;
+    margin: auto;
+    padding-bottom: 20px;
+  }
+  #contact_form_question p > span {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

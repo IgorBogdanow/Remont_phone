@@ -1,0 +1,19 @@
+@mixin text($color:white,$size:30,$weight:bold)
+    color: $color
+    font-size: calc( ( 100vw / 1920 ) * #{$size})
+    font-weight: $weight
+    @media (max-width: 760px)
+        font-size: calc( ( 100vw / 500 ) * #{$size})
+#contact_form_question
+    @include text(#00A3AF ,20 ,regular )
+@media ( max-width: 760px )
+    #contact_form_question
+        & .cf-custom .row_review_1
+            flex-direction: column
+            align-items: center
+        & p
+            width: 90%
+            margin: auto
+            padding-bottom: 20px
+            &>span
+                width: 100%
