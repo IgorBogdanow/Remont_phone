@@ -1,4 +1,4 @@
-* {
+*:not(#wpadminbar *) {
   font-family: montserrat, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
 }
 
